@@ -13,9 +13,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dasher gnome-master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=dasher&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-01-31 16:25+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=dasher\n"
+"POT-Creation-Date: 2021-02-15 22:14+0100\n"
 "PO-Revision-Date: 2018-02-21 18:06+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
@@ -41,11 +41,6 @@ msgstr "Prediktivní vstup textu"
 #: Data/dasher.desktop.in.in:5
 msgid "Enter text without a keyboard"
 msgstr "Vložit text bez klávesnice"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: Data/dasher.desktop.in.in:8
-msgid "dasher"
-msgstr "dasher"
 
 #: Data/GUI/dashermaemofullscreen.ui:10 Data/GUI/dasher.traditional.ui:17
 msgid "_File"
@@ -787,14 +782,6 @@ msgstr[2] ""
 
 #: Src/DasherCore/MandarinAlphMgr.cpp:251
 #, fuzzy, c-format
-#| msgid ""
-#| "In file %s, the following %i symbol appeared without annotations saying "
-#| "how it should be entered, but it can be entered in several ways. Dasher "
-#| "will not be able to learn how you want to enter this symbol:"
-#| msgid_plural ""
-#| "In file %s, the following %i symbols appeared without annotations saying "
-#| "how they should be entered, but each can be entered in several ways. "
-#| "Dasher will not be able to learn how you want to enter these symbols:"
 msgid ""
 "In file %s, the following %i symbols appeared without annotations saying how "
 "they should be entered, but each can be entered in several ways. Dasher will "
@@ -1320,3 +1307,6 @@ msgstr "– Aplikace pro zápis textu oslavující přístupnost"
 #: Src/main.cc:182
 msgid "Try 'dasher --help' for more information."
 msgstr "Pokud chcete více informací, zkuste „dasher --help“."
+
+#~ msgid "dasher"
+#~ msgstr "dasher"

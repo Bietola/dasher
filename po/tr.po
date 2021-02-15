@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dasher\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=dasher&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-09-01 16:47+0000\n"
+"product=dasher\n"
+"POT-Creation-Date: 2021-02-15 22:14+0100\n"
 "PO-Revision-Date: 2017-03-29 23:10+0300\n"
 "Last-Translator: Mursel Caglar <murselca@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -44,12 +44,6 @@ msgstr "Tahmini metin girişi"
 #: Data/dasher.desktop.in.in:5
 msgid "Enter text without a keyboard"
 msgstr "Metni klavye olmadan girin"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: Data/dasher.desktop.in.in:8
-#| msgid "Dasher"
-msgid "dasher"
-msgstr "dasher"
 
 #: Data/GUI/dashermaemofullscreen.ui:10 Data/GUI/dasher.traditional.ui:17
 msgid "_File"
@@ -401,35 +395,39 @@ msgstr "Durdurmada Hepsini Oku"
 msgid "Speak words as you write"
 msgstr "Siz yazdıkça kelimeleri okuma"
 
-#: Data/GUI/dasher.preferences.ui:1297
+#: Data/GUI/dasher.preferences.ui:1283
+msgid "Confirm unsaved files"
+msgstr ""
+
+#: Data/GUI/dasher.preferences.ui:1314
 msgid "Editor Font"
 msgstr "Düzenleyici Yazıtipi"
 
-#: Data/GUI/dasher.preferences.ui:1315
+#: Data/GUI/dasher.preferences.ui:1332
 msgid "Select Editor Font"
 msgstr "Düzenleyici Yazıtipi Seç"
 
-#: Data/GUI/dasher.preferences.ui:1343
+#: Data/GUI/dasher.preferences.ui:1360
 msgid "Application Style"
 msgstr "Uygulama Biçemi"
 
-#: Data/GUI/dasher.preferences.ui:1365
+#: Data/GUI/dasher.preferences.ui:1382
 msgid "Stand-alone"
 msgstr "Tek başına"
 
-#: Data/GUI/dasher.preferences.ui:1380
+#: Data/GUI/dasher.preferences.ui:1397
 msgid "Composition"
 msgstr "Kompozisyon"
 
-#: Data/GUI/dasher.preferences.ui:1397
+#: Data/GUI/dasher.preferences.ui:1414
 msgid "Direct entry"
 msgstr "Doğrudan giriş"
 
-#: Data/GUI/dasher.preferences.ui:1414
+#: Data/GUI/dasher.preferences.ui:1431
 msgid "Full Screen"
 msgstr "Tam Ekran"
 
-#: Data/GUI/dasher.preferences.ui:1454
+#: Data/GUI/dasher.preferences.ui:1471
 msgid "A_pplication"
 msgstr "U_ygulama"
 
@@ -457,7 +455,7 @@ msgstr "_Dosyaya ekle..."
 msgid "_Import Training Text…"
 msgstr "Eğitim Metnini _İçe Aktar..."
 
-#: Data/GUI/dasher.traditional.ui:65 Src/Gtk2/dasher_main.cpp:960
+#: Data/GUI/dasher.traditional.ui:65 Src/Gtk2/dasher_main.cpp:966
 msgid "Quit"
 msgstr "Çık"
 
@@ -494,7 +492,7 @@ msgid "_About…"
 msgstr "_Hakkında..."
 
 #: Data/GUI/dasher.traditional.ui:134
-#: Src/DasherCore/DasherInterfaceBase.cpp:795
+#: Src/DasherCore/DasherInterfaceBase.cpp:797
 msgid "Direct Mode"
 msgstr "Direk Kipi"
 
@@ -622,7 +620,7 @@ msgstr "Pusula Kipi"
 
 #. /TRANSLATORS: %s is the name of the alphabet; the string "GameTextFile"
 #. / refers to a setting name in gsettings or equivalent, and should not be translated.
-#: Src/DasherCore/DasherInterfaceBase.cpp:314
+#: Src/DasherCore/DasherInterfaceBase.cpp:316
 #, c-format
 msgid ""
 "Could not find game sentences file for %s - check alphabet definition, or "
@@ -631,12 +629,12 @@ msgstr ""
 "%s için oyun cümleleri dosyası bulunamadı - alfabe tanımlamasını kontrol "
 "edin, veya GameTextFile ayarı ile ezin"
 
-#: Src/DasherCore/DasherInterfaceBase.cpp:784
+#: Src/DasherCore/DasherInterfaceBase.cpp:786
 msgid "Normal Control"
 msgstr "Normal Kontrol"
 
 #. TODO: specialist factory for button mode
-#: Src/DasherCore/DasherInterfaceBase.cpp:794
+#: Src/DasherCore/DasherInterfaceBase.cpp:796
 msgid "Menu Mode"
 msgstr "Menü Kipi"
 
@@ -760,10 +758,7 @@ msgstr ""
 "Uyarı: alıştırma dosyasında, dipnot '<%s>' den sonra başka bir dipnot var "
 "göz ardı edilecek"
 
-#. /TRANSLATORS: first string will be the filename; after the end of the string,
-#. / some number of output (e.g. Chinese) characters will be appended,
-#. / the number of which is the integer here
-#: Src/DasherCore/MandarinAlphMgr.cpp:244
+#: Src/DasherCore/MandarinAlphMgr.cpp:247
 #, c-format
 msgid ""
 "In file %s, the following %i symbol appeared without annotations saying how "
@@ -777,6 +772,17 @@ msgstr[0] ""
 "%s dosyasında, %i sembolü nasıl girilmesini belirten dipnot olmadan "
 "bulunuyor, ama bir çok şekilde girilebilir. Dasher bu sembolü nasıl girmek "
 "istediğinizi öğrenemeyecek:"
+
+#: Src/DasherCore/MandarinAlphMgr.cpp:251
+#, c-format
+msgid ""
+"In file %s, the following %i symbols appeared without annotations saying how "
+"they should be entered, but each can be entered in several ways. Dasher will "
+"not be able to learn how you want to enter these symbols:"
+msgstr ""
+"%s dosyasında, %i sembolleri nasıl girilmesi gerektiğini belirten dipnot "
+"olmadan bulunuyor, ama bir çok şekilde girilebilirler. Dasher bu sembolleri "
+"nasıl girmek istediğinizi öğrenemeyecek:"
 
 #: Src/DasherCore/NodeCreationManager.cpp:33
 msgid "Training on User Text"
@@ -911,7 +917,6 @@ msgid "false"
 msgstr "false"
 
 #: Src/DasherCore/SettingsStore.cpp:102
-#| msgid "false"
 msgid "False"
 msgstr "Yanlış"
 
@@ -1103,11 +1108,13 @@ msgstr "Tamsayı parametreleri"
 msgid "String parameters"
 msgstr "Dizgi parametreleri"
 
+#. Note to translators: This is the version keyword showing for the command line option "--version"
 #: Src/Gtk2/DasherAppSettings.cpp:161
 msgid "Version"
 msgstr "Versiyon"
 
-#: Src/Gtk2/DasherAppSettings.cpp:161
+#. Note to translators: This is the license keyword showing for the command line option "--version"
+#: Src/Gtk2/DasherAppSettings.cpp:163
 msgid "License"
 msgstr "Lisans"
 
@@ -1118,7 +1125,6 @@ msgstr "_Aç"
 
 #: Src/Gtk2/dasher_editor.cpp:814 Src/Gtk2/dasher_editor.cpp:848
 #: Src/Gtk2/dasher_main.cpp:549 Src/Gtk2/dasher_main.cpp:886
-#| msgid "Cancel"
 msgid "_Cancel"
 msgstr "_İptal"
 
@@ -1173,7 +1179,7 @@ msgstr "Hayır"
 msgid "Yes"
 msgstr "Evet"
 
-#: Src/Gtk2/dasher_main.cpp:922
+#: Src/Gtk2/dasher_main.cpp:928
 #, c-format
 msgid ""
 "Do you want to save your changes to %s?\n"
@@ -1184,7 +1190,7 @@ msgstr ""
 "\n"
 "Eğer kaydetmezseniz değişiklikleriniz kaybolacak."
 
-#: Src/Gtk2/dasher_main.cpp:929
+#: Src/Gtk2/dasher_main.cpp:935
 msgid ""
 "Do you want to save your changes?\n"
 "\n"
@@ -1194,31 +1200,31 @@ msgstr ""
 "\n"
 "Eğer kaydetmezseniz değişiklikleriniz kaybolacak."
 
-#: Src/Gtk2/dasher_main.cpp:935
+#: Src/Gtk2/dasher_main.cpp:941
 msgid "Quit without saving"
 msgstr "Kaydetmeden kapat"
 
-#: Src/Gtk2/dasher_main.cpp:936 Src/Gtk2/dasher_main.cpp:959
+#: Src/Gtk2/dasher_main.cpp:942 Src/Gtk2/dasher_main.cpp:965
 msgid "Don't quit"
 msgstr "Çıkma"
 
-#: Src/Gtk2/dasher_main.cpp:937
+#: Src/Gtk2/dasher_main.cpp:943
 msgid "Save and quit"
 msgstr "Kaydet ve Çık"
 
-#: Src/Gtk2/dasher_main.cpp:956
+#: Src/Gtk2/dasher_main.cpp:962
 msgid "Are you sure you wish to quit?"
 msgstr "Çıkmak istediğinizden emin misiniz?"
 
-#: Src/Gtk2/dasher_main.cpp:998
+#: Src/Gtk2/dasher_main.cpp:1004
 msgid "Unable to open help file"
 msgstr "Yardım dosyası açılamadı"
 
-#: Src/Gtk2/dasher_main.cpp:1050
+#: Src/Gtk2/dasher_main.cpp:1056
 msgid "Dasher is a predictive text entry application"
 msgstr "Dasher bir tahmini metin girişi uygulamasıdır"
 
-#: Src/Gtk2/dasher_main.cpp:1055
+#: Src/Gtk2/dasher_main.cpp:1061
 msgid "translator-credits"
 msgstr ""
 "Barış Çiçek <baris@teamforce.name.tr>\n"
@@ -1250,7 +1256,7 @@ msgstr "Y aralığını kapsayan pikseller"
 msgid "One Dimensional Mouse Input"
 msgstr "Tek Boyutlu Fare Girişi"
 
-#: Src/Gtk2/Preferences.cpp:437
+#: Src/Gtk2/Preferences.cpp:438
 msgid "Action"
 msgstr "Eylem"
 
@@ -1259,29 +1265,34 @@ msgstr "Eylem"
 #. {"textentry", 'o', 0, G_OPTION_ARG_NONE, &textentry, "Onscreen text entry mode", NULL},
 #. {"pipe", 's', 0, G_OPTION_ARG_NONE, &stdoutpipe, "Pipe text to stdout", NULL},
 #. Note to translators: This is the help string for "--appstyle". The four options in brackets MUST either NOT be translated or at least it MUST be clear that they must be used in english. Otherwise a user running a non-english system will receive an error message when using the translated one instead of the english one and has no chance to find out the correct option.
-#: Src/main.cc:161
+#: Src/main.cc:162
 msgid "Application style (traditional, direct, compose or fullscreen)"
 msgstr ""
 "Uygulama biçemi (\"traditional\" (geleneksel), \"direct\" (doğrudan), "
 "\"compose\" (karışık) ya da \"fullscreen\" (tam ekran))"
 
 #. Note to translators: This is the help string for "--options"
-#: Src/main.cc:163
+#: Src/main.cc:164
 msgid "Override stored options"
 msgstr "Kayıtlı seçeneklerin yerine geç"
 
-#: Src/main.cc:164
+#: Src/main.cc:165
 msgid "XML configuration file name"
 msgstr "XML yapılandırma dosyası adı"
 
 #. Note to translators: This is the help string for "--help-options"
-#: Src/main.cc:166
+#: Src/main.cc:167
 msgid "Describe \"--options\"."
 msgstr "\"--options\" tanımla."
 
+#. Note to translators: This is the help string for "--version"
+#: Src/main.cc:169
+msgid "Show the version details."
+msgstr ""
+
 #. parse command line options
 #. Note to translators: This is the "--help" description of dasher.
-#: Src/main.cc:172
+#: Src/main.cc:175
 msgid "- A text input application honouring accessibility"
 msgstr "- Erişilebilirliği yücelden bir metin giriş uygulaması"
 
@@ -1289,6 +1300,10 @@ msgstr "- Erişilebilirliği yücelden bir metin giriş uygulaması"
 #: Src/main.cc:182
 msgid "Try 'dasher --help' for more information."
 msgstr "Daha fazla bilgi için \"dasher --help\" komutunu deneyin."
+
+#~| msgid "Dasher"
+#~ msgid "dasher"
+#~ msgstr "dasher"
 
 #~ msgid "Include Clipboard commands"
 #~ msgstr "Pano komutlarını dahil et"
@@ -1310,15 +1325,6 @@ msgstr "Daha fazla bilgi için \"dasher --help\" komutunu deneyin."
 
 #~ msgid "Done"
 #~ msgstr "Bitti"
-
-#~ msgid ""
-#~ "In file %s, the following %i symbols appeared without annotations saying "
-#~ "how they should be entered, but each can be entered in several ways. "
-#~ "Dasher will not be able to learn how you want to enter these symbols:"
-#~ msgstr ""
-#~ "%s dosyasında, %i sembolleri nasıl girilmesi gerektiğini belirten dipnot "
-#~ "olmadan bulunuyor, ama bir çok şekilde girilebilirler. Dasher bu "
-#~ "sembolleri nasıl girmek istediğinizi öğrenemeyecek:"
 
 #~ msgid "Don't save"
 #~ msgstr "Kaydetme"

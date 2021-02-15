@@ -137,7 +137,6 @@ extern "C" gint main_key_snooper(GtkWidget *pWidget, GdkEventKey *pEvent, gpoint
 
 
 int main(int argc, char *argv[]) {
-
   //  DasherAppSettings *g_pDasherAppSettings;
   //  GtkWidget *window; // Main window
 

@@ -1,6 +1,6 @@
 Dasher Version 5
 -------------------
-## Build Status:
+# Build Status:
 
 Windows:
 [![Build status](https://ci.appveyor.com/api/projects/status/3qopfgq5rd2jao1x/branch/master?svg=true)](https://ci.appveyor.com/project/cagdasgerede/dasher-j1fle/branch/master)

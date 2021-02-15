@@ -8,9 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dasher master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=dasher&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-12-28 10:02+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=dasher\n"
+"POT-Creation-Date: 2021-02-15 22:14+0100\n"
 "PO-Revision-Date: 2018-01-31 13:53+0700\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: GNOME Indonesian Translation Team <gnome@i15n.org>\n"
@@ -36,11 +36,6 @@ msgstr "Isian teks yang prediktif"
 #: Data/dasher.desktop.in.in:5
 msgid "Enter text without a keyboard"
 msgstr "Masukan teks tanpa papan tik"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: Data/dasher.desktop.in.in:8
-msgid "dasher"
-msgstr "dasher"
 
 #: Data/GUI/dashermaemofullscreen.ui:10 Data/GUI/dasher.traditional.ui:17
 msgid "_File"
@@ -1301,3 +1296,6 @@ msgstr "- Suatu aplikasi masukan teks yang menghormati aksesibilitas"
 #: Src/main.cc:182
 msgid "Try 'dasher --help' for more information."
 msgstr "Gunakan 'dasher --help' untuk informasi lebih banyak."
+
+#~ msgid "dasher"
+#~ msgstr "dasher"

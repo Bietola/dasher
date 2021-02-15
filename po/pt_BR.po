@@ -15,9 +15,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dasher\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
-"product=dasher&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-12-28 10:02+0000\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=dasher\n"
+"POT-Creation-Date: 2021-02-15 22:14+0100\n"
 "PO-Revision-Date: 2018-01-08 20:00-0200\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
@@ -44,11 +44,6 @@ msgstr "Entrada preditiva de texto"
 #: Data/dasher.desktop.in.in:5
 msgid "Enter text without a keyboard"
 msgstr "Digite texto sem um teclado"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: Data/dasher.desktop.in.in:8
-msgid "dasher"
-msgstr "dasher"
 
 #: Data/GUI/dashermaemofullscreen.ui:10 Data/GUI/dasher.traditional.ui:17
 msgid "_File"
@@ -1325,9 +1320,11 @@ msgstr "- Um aplicativo de entrada de texto honrando a acessibilidade"
 
 #. Note to translators: This is the help string for unrecognized command line options. Do not translate 'dasher --help' part.
 #: Src/main.cc:182
-#| msgid "unknown option, use \"--help-options\" for more information."
 msgid "Try 'dasher --help' for more information."
 msgstr "Tente “dasher --help” para mais informações."
+
+#~ msgid "dasher"
+#~ msgstr "dasher"
 
 #~ msgid "Auto-increasing speed to %0.2f"
 #~ msgstr "Aumentar a velocidade automaticamente para %0.2f"

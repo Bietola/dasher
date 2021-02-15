@@ -16,6 +16,7 @@
 #include "dasher_main.h"
 #include "GtkDasherControl.h"
 #include "../DasherCore/ControlManager.h"
+#include "../CommandLogger/command_logger.h"
 
 #if GTK_CHECK_VERSION (3,0,0)
 G_DEFINE_TYPE(DasherEditor, dasher_editor, GTK_TYPE_BOX);
@@ -349,6 +350,8 @@ dasher_editor_internal_create_buffer(DasherEditor *pSelf) {
 // }   
 void
 dasher_editor_output(DasherEditor *pSelf, const gchar *szText, int iOffset) {
+  command_logger::log_text(szText);
+
   DasherEditorPrivate *pPrivate = DASHER_EDITOR_GET_PRIVATE(pSelf);
 
   if (isdirect(pPrivate->pAppSettings))
@@ -391,6 +394,8 @@ dasher_editor_output(DasherEditor *pSelf, const gchar *szText, int iOffset) {
 // }   
 void
 dasher_editor_delete(DasherEditor *pSelf, int iLength, int iOffset) {
+  command_logger::log_deletion();
+
   DasherEditorPrivate *pPrivate = DASHER_EDITOR_GET_PRIVATE(pSelf);
 
   if (isdirect(pPrivate->pAppSettings))
