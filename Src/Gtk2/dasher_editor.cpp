@@ -354,8 +354,9 @@ dasher_editor_output(DasherEditor *pSelf, const gchar *szText, int iOffset) {
 
   DasherEditorPrivate *pPrivate = DASHER_EDITOR_GET_PRIVATE(pSelf);
 
-  if (isdirect(pPrivate->pAppSettings))
-    return dasher_editor_external_output(pSelf, szText, iOffset);
+  // DEACTIVATE DIRECT MODE
+  /* if (isdirect(pPrivate->pAppSettings)) */
+  /*   return dasher_editor_external_output(pSelf, szText, iOffset); */
 
   gtk_text_buffer_delete_selection(pPrivate->pBuffer, false, true );
 
@@ -398,8 +399,9 @@ dasher_editor_delete(DasherEditor *pSelf, int iLength, int iOffset) {
 
   DasherEditorPrivate *pPrivate = DASHER_EDITOR_GET_PRIVATE(pSelf);
 
-  if (isdirect(pPrivate->pAppSettings))
-    return dasher_editor_external_delete(pSelf, iLength, iOffset);
+  // DEACTIVATE DIRECT MODE
+  /* if (isdirect(pPrivate->pAppSettings)) */
+  /*   return dasher_editor_external_delete(pSelf, iLength, iOffset); */
 
   GtkTextIter end;
 

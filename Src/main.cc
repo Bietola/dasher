@@ -254,6 +254,9 @@ void clean_up() {
   osso_deinitialize(osso_context);
 #endif
 
+  // TODO: Find out how to call this
+  // command_logger::handle_cleanup();
+
   /* TODO: check that this really does the right thing with the references counting */
   if(g_pDasherMain)
     g_object_unref(G_OBJECT(g_pDasherMain));

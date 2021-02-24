@@ -1,15 +1,24 @@
-#ifndef __user_commander_logger_h__
-#define __user_commander_logger_h__
+#ifndef __user_command_logger_h__
+#define __user_command_logger_h__
+
+#include <stdio.h> 
+#include <string.h> 
+#include <fcntl.h> 
+#include <sys/stat.h> 
+#include <sys/types.h> 
+#include <unistd.h> 
 
 namespace command_logger {
     // Set log file path here
     static const char* LOG_FILE_PATH = "/home/dincio/logs/dasher-commands";
 
-    static FILE* LOG_FILEH = NULL;
+    static int LOG_FILEH = NULL;
 
     void init_log_file() {
         if (!LOG_FILEH) {
-            LOG_FILEH = fopen(LOG_FILE_PATH, "w+");
+            mkfifo(LOG_FILE_PATH, 0666);
+
+            LOG_FILEH = open(LOG_FILE_PATH, O_WRONLY);
         }
     }
 
@@ -30,20 +39,18 @@ namespace command_logger {
             resTxt = text;
         }
 
-        printf("Logging text: %s\n", resTxt); fflush(stdout);
-
-        // Res
-        // TODO: printf("%s", resTxt);
+        printf("\nKey(%s)\n", resTxt); fflush(stdout);
     }
 
     void log_deletion() {
         init_log_file();
 
-        printf("Logging delete\n"); fflush(stdout);
-
-        // TODO: fprintf("<bs>");
+        printf("\nKey(<bs>)\n"); fflush(stdout);
     }
 
+    void handle_cleanup() {
+        if (LOG_FILEH) { close(LOG_FILEH); }
+    }
 }
 
 #endif
